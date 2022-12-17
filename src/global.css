@@ -7,9 +7,7 @@
 
   --text: #241919;
   --font-footer:  #fff;
-  /* --font-footer:  #fff789; */
-  --menu-bg-color: #373a5f;
-  /* --menu-bg-color: #5055AD; */
+  --menu-bg-color: #373a5f; 
   --header-bg-color: linear-gradient(180deg, rgba(255,236,233,1) 4%, rgba(240,168,155,1) 83%);
   --body-bg-color: rgb(255,236,233);
 }

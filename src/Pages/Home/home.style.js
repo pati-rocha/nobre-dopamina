@@ -3,11 +3,13 @@ import styled from "styled-components";
 export const MainHomeStyled = styled.main `
     margin: auto;
     font-size: 1rem;
-    width: 60%;
-    margin: 50px auto;  
+    margin:  auto; 
+    width: 70%;
+    background: var(--body-bg-color);
+    padding: 50px;
 
     & .firstSection p {
-        text-indent: 2rem;
+        margin-top: 20px;
     }
 
 `

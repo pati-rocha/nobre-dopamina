@@ -25,10 +25,14 @@ export const NavStyled = styled.nav `
         color: #fff;
         text-decoration: none;
     }
-    .menu {
+    & .menu {
         color: #fff;    
         text-decoration: none;
         font-size: 1.5rem;
+        transition: background-color 0.4s;
+    }
+    & .menu:hover {
+        border-bottom: 3px solid #00cec9;       
     }
   
     & ul{
@@ -39,6 +43,8 @@ export const NavStyled = styled.nav `
         width: 50%;
         height: 4rem;            
     }
+   
+    
     /* @media screen and (max-width:480px) {
         flex-direction: column;  
         height: 200px;

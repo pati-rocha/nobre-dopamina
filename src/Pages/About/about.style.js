@@ -2,8 +2,10 @@
 import styled from "styled-components"
 
 export const MainAboutStyled = styled.main `
-    width: 60%;
-    margin: 50px auto;
+    width: 70%;
+    background: var(--body-bg-color);
+    padding: 50px;
+    margin:  auto;
    
 
     & h3 {

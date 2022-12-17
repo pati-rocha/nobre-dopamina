@@ -8,16 +8,17 @@ import imgTypes from "../../assets/types.png"
 import imgDiagnosis from "../../assets/diagnosis.png"
 
 import { useState } from "react";
-import { SectionStyled } from "../../components/Section/section.style.js";
+
 
 export function Home() {
 
   const [open, setOpen] = useState(false)
   return (
     <>
-      <Header text={"Bem vindo(a)!!!"} image={imgHeader}/>
+      <Header image={imgHeader} />
       <MainHomeStyled>
         <section className="firstSection">
+          <h2>Bem vindo(a)!!!</h2>
           <p>
             Nobre Dopamina foi pensado a partir da dificuldade em encontrar referências sobre atendimento médico especializado para diagnóstico do TDAH. Pensando nisso o site foi desenvolvido para a comunidade para ser um ambiente seguro para trocar experiências
             sobre as vivências das pessoas com o transtorno e também para indicações de
