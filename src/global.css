@@ -18,6 +18,6 @@
   box-sizing: border-box;
 }
 body {
-  background: var(--body-bg-color);
+
   color: var(--text);
 }

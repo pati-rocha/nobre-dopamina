@@ -8,7 +8,6 @@ import { Communit } from "./Pages/Communit/communit";
 import { Login } from "./Pages/Login/login";
 import { Error } from "./Pages/Error/error";
 
-import { Private } from "./routes/Private";
 
 export function Router() {
   return (
@@ -19,7 +18,7 @@ export function Router() {
 
         <Route path="/sobre" element={<About />} />
 
-        <Route path="/comunidade" element={<Private><Communit /></Private>} />
+        <Route path="/comunidade" element={<Communit />} />
 
         <Route path="/login" element={<Login />} />
 
