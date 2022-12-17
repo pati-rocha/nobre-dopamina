@@ -74,7 +74,8 @@ Siga os passos e inclua as informações abaixo:
 ### 😎 Próximos passos mapeados
 
 - Concluir cadastro de usuários
-- Adiconar login social com Google
+- Adicionar código de conduta
+- Adicionar login social com Google
 - Adicionar pesquisa por estados e especialidade na página comunidade
 - Incluir Testes
 - Revisar acessibilidade
