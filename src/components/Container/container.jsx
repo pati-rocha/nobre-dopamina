@@ -14,7 +14,7 @@ export function Container({uf,city,contact, content,created,expertise,plan,profe
         <div className="containerText">
             <p>{professional}</p>
             <p>{expertise}</p>
-            <p>Contato:{contact}</p>
+            <p>Contato: {contact}</p>
             <p>Aceita plano de saúde: {plan}</p>
             <p>{content}</p>
         </div>
