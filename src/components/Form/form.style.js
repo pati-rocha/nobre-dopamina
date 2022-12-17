@@ -4,15 +4,20 @@ import styled from "styled-components";
 export const FormStyled = styled.form`
     max-width: 600px;
     width: 100%;
-    margin: auto;
+    margin: 50px auto;
     display: flex;
     flex-direction: column;
     text-align: right;
     gap: 6px;
-    background:var(--header-bg-color);
+    background-color: rgba(240,168,155,1);
+    /* background:var(--header-bg-color); */
     border-radius: 8px;
     padding:  32px 12px; 
 
+    & h2{
+        text-align: center;
+        padding-bottom: 30px;
+    }
     & label{
         font-size: 1rem;
         margin-right: 8px;

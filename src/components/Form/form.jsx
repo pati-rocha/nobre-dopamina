@@ -5,6 +5,18 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useEffect, useState } from "react";
+import { toast } from "react-toastify";
+
+import { db } from "../../services/firebaseConfig"; 
+import{
+  addDoc,
+  collection,
+  onSnapshot,
+  query,
+  orderBy,
+  deleteDoc
+} from "firebase/firestore"
+import { Container } from "../Container/container";
 
 const schema = yup.object().shape({
   uf: yup.string().required("Campo obrigatório!"),
@@ -16,7 +28,7 @@ const schema = yup.object().shape({
     .string()
     .required("Campo obrigatório!")
     .min(11, "Mínimo 11 caracteres"),
-  content: yup.string().required("Campo obrigatório!"),
+  content: yup.string().required("Campo obrigatório!").max(800, "Máximo 800 caracteres "),
   checkbox: yup
     .boolean()
     .oneOf([true], "Você deve aceitar os termos e condições!"),
@@ -33,43 +45,95 @@ export function Form() {
   });
 
   const onSubmit = (data) => {
-    console.log(data);
-    reset();
+
+    data.created = new Date()
+
+    addDoc(collection(db, "posts"), data)
+     .then( () => {
+      toast.success("Enviado com sucesso!")
+      reset();
+     })
+     .cath((error) => {
+      console.log("errro ao enviar", + error);
+      toast.error("Ops erro ao enviar")
+     })    
   };
 
   const [ufs, setUfs] = useState([]);
   const [cities, setCities] = useState([]);
   const [selectedUf, setSelectedUf] = useState("");
-  const [selectedCity, setSelectedCity] = useState("0");
+  const [selectedCity, setSelectedCity] = useState("");
+
+  const [posts, setPosts] = useState([]);
+
+  useEffect( () => {
+
+    const postsRef = collection(db, "posts")
+    const queryRef = query( postsRef, orderBy("created","asc"))
+
+    const unsub = onSnapshot(queryRef, (snapshot) => {
+      let lista = [];
+
+      snapshot.forEach((doc) => {
+        lista.push({
+          id: doc.id,
+          created:doc.data().created,
+          uf: doc.data().uf,
+          city:doc.data().city,
+          expertise:doc.data().expertise,
+          plan:doc.data().plan,
+          professional:doc.data().professional,
+          contact:doc.data().contact,
+          content:doc.data().content       
+
+        })
+      })
+      setPosts(lista);
+    })
+
+
+  },[])
 
   useEffect(() => {
     axios
       .get("https://servicodados.ibge.gov.br/api/v1/localidades/estados")
       .then((response) => {
-        setUfs(response.data);
-        console.log(response.data);
+        setUfs(response.data);        
       });
   }, []);
 
   useEffect(() => {
-    axios
+    if(selectedUf !== "") {
+      axios
       .get(`https://servicodados.ibge.gov.br/api/v1/localidades/estados/${selectedUf}/municipios`)
       .then((response) => {
-        setCities(response.data);
-        console.log(response.data);      
+        setCities(response.data);             
       });
+    }
+    
   }, [selectedUf]);
 
-  function handleSelectedUf(e){
-    const uf = e.target.value;    
-    setSelectedUf(uf);
+  function handleSelectedUf(ufSigla){ 
+    setSelectedUf(ufSigla);
   }
   
-  function handleSelectedCity(e){
-    const city = e.target.value;
+  function handleSelectedCity(city){
     setSelectedCity(city);
   }
   return (
+    <>
+     {posts.map( (item,index) => (
+      <Container 
+      key={index}
+      uf={item.uf}
+      city={item.city}
+      contact={item.contact}
+      content={item.content}
+      expertise={item.expertise}
+      plan={item.plan}
+      professional={item.professional}
+      />
+    ))}
     <FormStyled onSubmit={handleSubmit(onSubmit)}>
       <div>
         <label>Estado:</label>
@@ -77,9 +141,8 @@ export function Form() {
           className="input"
           type="text"
           name="uf"
-          id="uf"
-          onChange={handleSelectedUf}
-          {...register("uf")}
+          id="uf"          
+          {...register("uf", {onChange:(e) => handleSelectedUf(e.target.value)})}
         >
           <option></option>
           {ufs.map(uf => (
@@ -98,9 +161,7 @@ export function Form() {
           type="text"
           name="city"
           id="city"
-          value={selectedCity}
-          onChange={handleSelectedCity}
-          {...register("city")}
+          {...register("city", {onChange:(e) => handleSelectedCity(e.target.value)})}
         >
           <option></option>
           {cities.map(city => (
@@ -122,9 +183,9 @@ export function Form() {
           {...register("expertise")}
         >
           <option></option>
-          <option value={"neurologia"}> Neurologia </option>
-          <option value={"psiquiatria"}> Psicologia </option>
-          <option value={"psicologia"}> Psiquiatria</option>
+          <option value={"Neurologia"}> Neurologia </option>
+          <option value={"Psicologia"}> Psicologia </option>
+          <option value={"Psiquiatria"}> Psiquiatria</option>
         </select>
       </div>
       <p>{errors.expertise?.message}</p>
@@ -144,8 +205,10 @@ export function Form() {
         <input
           className="input"
           type="text"
+          minLength={8}
+          maxLength={40}
           placeholder="Nome do profissional"
-          name="professional"
+          name="professional"         
           {...register("professional")}
         />
       </div>
@@ -169,6 +232,8 @@ export function Form() {
         <textarea
           placeholder="Deixe sua mensagem..."
           rows="8"
+          minLength={10}
+          maxLength={800}
           name="content"
           {...register("content")}
         ></textarea>
@@ -188,8 +253,11 @@ export function Form() {
         </label>
       </div>
       <p>{errors.checkbox?.message}</p>
-
-      <button>Enviar</button>
+      <button>Enviar</button>          
+     
     </FormStyled>
+
+   
+    </>
   );
 }
