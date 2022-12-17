@@ -5,8 +5,9 @@ import imgDuvida from "../../assets/duvida1.png"
 export function About() {
     return(
         <>
-        <Header text={"O que é o TDAH?"} image={imgDuvida} textAlt={"ilustração de cérebro rosa com lâmpadas amarelas ao seu redor"}  />
+        <Header image={imgDuvida} textAlt={"balões coloridos com interrogação dentro"}  />
        <MainAboutStyled>
+        <h2>O que é o TDAH?</h2>
         <p>O Transtorno do Déficit de Atenção com Hiperatividade (TDAH) é um transtorno neurobiológico, de causas genéticas, que aparece na infância e freqüentemente acompanha o indivíduo por toda a sua vida. Ele se caracteriza por sintomas de desatenção, inquietude e impulsividade. Ele é chamado às vezes de DDA (Distúrbio do Déficit de Atenção). Em inglês, também é chamado de ADD, ADHD ou de AD/HD.</p>
 
         <h3>Existe mesmo o TDAH?</h3>

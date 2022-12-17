@@ -10,6 +10,7 @@ export const MainLoginStyled = styled.main`
     margin: auto;
     background-image: var( --header-bg-color);
     font-size: 1rem;
+    padding-top: 70px;
 
     & img {
         max-width: 150px;
@@ -29,6 +30,7 @@ export const FormStyled = styled.form`
     align-items: center;
     padding: 30px;
     gap: 14px;
+    
 
     input {
         max-width: 400px;
@@ -52,6 +54,22 @@ export const FormStyled = styled.form`
         border-radius: 10px;
         cursor: pointer;
 
+    }
+   
+`
+
+export const RegisterStyled = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    
+    & p{
+        color: black;
+        text-align: center;
+    }
+    & a {
+        text-decoration: none;
     }
 
 

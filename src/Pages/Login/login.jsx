@@ -1,8 +1,9 @@
-import { FormStyled, MainLoginStyled, } from "./login.style";
+import { FormStyled, MainLoginStyled, RegisterStyled} from "./login.style";
 import imgLogin from "../../assets/avatarLogin.png";
 import { toast } from "react-toastify";
 
 import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 
@@ -26,6 +27,7 @@ export function Login() {
     resolver:yupResolver(schema)
   });
 
+  
   const navigate = useNavigate();
 
   const onSubmit = data => {
@@ -67,6 +69,12 @@ export function Login() {
         <p>{errors.password?.message}</p>
 
         <button type="submit">Entrar</button>
+
+        <RegisterStyled>
+          <p>Você ainda não tem conta?</p>
+          <Link to={"/cadastro"}>Crie sua conta aqui</Link>
+        </RegisterStyled>
+
       </FormStyled>
     </MainLoginStyled>
   );

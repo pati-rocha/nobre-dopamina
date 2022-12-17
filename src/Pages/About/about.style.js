@@ -5,13 +5,11 @@ export const MainAboutStyled = styled.main `
     width: 70%;
     background: var(--body-bg-color);
     padding: 50px;
-    margin:  auto;
-   
+    margin:  auto;   
 
-    & h3 {
+    & h2, h3 {
         margin-bottom: 5px;
     }
-
     & p {
         margin-bottom: 20px;
     }

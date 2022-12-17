@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import { NavStyled } from "./menu.style";
-
 import imgLogo from "../../assets/dopamina.png";
 
 export function Menu() {
+ 
   return (
     <NavStyled>
       <div className="divLogo">
@@ -32,7 +32,7 @@ export function Menu() {
           <Link className="menu" to={"/login"}>
             Login
           </Link>
-        </li>
+        </li>       
       </ul>
     </NavStyled>
   );
