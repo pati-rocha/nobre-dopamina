@@ -46,7 +46,7 @@ export function Form() {
 
   const onSubmit = (data) => {
 
-    data.created = new Date()
+    data.created = new Date().toLocaleDateString()
 
     addDoc(collection(db, "posts"), data)
      .then( () => {
@@ -65,6 +65,22 @@ export function Form() {
   const [selectedCity, setSelectedCity] = useState("");
 
   const [posts, setPosts] = useState([]);
+  const [termoBuscado, setTermoBuscado] = useState("");
+  const [postsFiltrados, setPostsFiltrados] = useState([]);
+
+   
+  function handleSearch(e) {
+    setTermoBuscado(e.target.value);
+  }
+
+  useEffect(() => {
+    const filtered = posts.filter((post) => {
+      return post.uf.includes(termoBuscado.toLowerCase());
+    });
+    setPostsFiltrados(filtered);
+
+  }, [])
+
 
   useEffect( () => {
 
@@ -90,7 +106,6 @@ export function Form() {
       })
       setPosts(lista);
     })
-
 
   },[])
 
@@ -122,6 +137,7 @@ export function Form() {
   }
   return (
     <>
+      
      {posts.map( (item,index) => (
       <Container 
       key={index}
@@ -129,6 +145,7 @@ export function Form() {
       city={item.city}
       contact={item.contact}
       content={item.content}
+      created={item.created}
       expertise={item.expertise}
       plan={item.plan}
       professional={item.professional}
@@ -248,8 +265,7 @@ export function Form() {
           {...register("checkbox")}
         />
         <label>
-          Declaro que li, concordo e estou ciente das aplicações legais
-          descritas no código de conduta.
+          Concordo com a Política de Privacidade e com o Termo de Uso.
         </label>
       </div>
       <p>{errors.checkbox?.message}</p>
