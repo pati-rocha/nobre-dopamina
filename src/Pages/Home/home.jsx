@@ -22,13 +22,10 @@ export function Home() {
         <section className="firstSection">
           <h2>Bem vindo(a)!!!</h2>
           <p>
-            Nobre Dopamina foi pensado a partir da dificuldade em encontrar referências sobre atendimento médico especializado para diagnóstico do TDAH. Pensando nisso o site foi desenvolvido para a comunidade para ser um ambiente seguro para trocar experiências
-            sobre as vivências das pessoas com o transtorno e também para indicações de
-            profissionais.
+            Nobre Dopamina foi pensado a partir da dificuldade em encontrar referências obre atendimento humanizado e especializado para o tratamento do TDAH e após relatos de pacientes sobre médicos desatualizados e a descrentes do transtorno em adultos, o site foi desenvolvido com objetivo de centralizar as indicações e também ser um local seguro onde as pessoas possam compartilhar experiências e indicações profissionais como também encontrar informações, dicas, sugestões e matérias sobre o TDAH.
           </p>
           <p>
-            Nesse espaço você encontra informações, dicas, sugestões e matérias sobre o
-            transtorno.
+          O nome que deu origem a página partiu da própria condição do transtorno que é a baixa produção do neurotransmissor dopamina, por isso o destaque para ser valorizada. A logo se trata de uma ilustração da fórmula estrutural da dopamina que faz parte da família das catecolaminas.
           </p>
         </section>
        <div className="cardsContainer">
@@ -107,19 +104,61 @@ export function Home() {
         <h3>2 – Como se organizar e evitar a desordem diária</h3>
         <p>A distração e a falta de atenção tornam a vida de um adulto com TDAH um verdadeiro desafio, deixando-o sobrecarregado. As dicas a seguir, foram elaboradas para ajudar o pessoa com TDAH a organizar melhor a sua vida.</p>
         <ul>
-          <li><strong>Crie espaço </strong>– Verifique diariamente o que você usará e o que deverá ficar guardado. Defina lugares para chaves, contas e outros itens que se perdem facilmente. E jogue fora tudo o que não for necessário!</li>
-          <li><strong>Use uma agenda </strong>– O uso da agenda ajuda a lidar e organizar os seus horários e compromissos. É como andar de bicicleta – a prática leva a perfeição. Quanto mais você utiliza, mais você criará padrões de comportamento organizado.</li>
-          <li><strong> Faça listas </strong>– Crie o hábito de fazer listas e anotar tudo o que for importante, como tarefas, compromissos, projetos, deadlines, etc. Caso esteja usando uma agenda, mantenha suas anotações junto. O planejamento é condição necessária para o bom desempenho das pessoas com TDAH.</li>
-          <li><strong> Faça agora!</strong>– Para evitar o esquecimento, procrastinação e desordem, comuns em adultos com TDAH, faça o que tiver que ser feito na hora, evitando deixar ‘’para depois’’. Tarefas como responder a um e-mail importante, limpar sua bagunça, retornar uma ligação, preparar uma apresentação não podem ficar para ‘’o dia seguinte’’.</li>
-          <li><strong> Estabeleça um sistema de arquivamento</strong>– Use divisores, ou então separe pelo tipo de documento (receitas, contas, fichas de inscrição, etc.). Etiquetar ou colorir seus arquivos também são ótimas estratégias.</li>
-          <li><strong>Dedique um tempo do seu dia para e-mails </strong>– Separe alguns minutos do seu dia para checar seus e-mails, evitando abrir sua caixa de correspondência de 5 em 5 minutos. Responda, arquive ou apague na hora, dependendo do caso.</li>        
+          <li><strong>Crie espaço </strong>– Verifique diariamente o que você usará e o que deverá ficar guardado. Defina lugares para chaves, contas e outros itens que se perdem facilmente. E jogue fora tudo o que não for necessário!
+          </li>
+          <li><strong>Use uma agenda </strong>– O uso da agenda ajuda a lidar e organizar os seus horários e compromissos. É como andar de bicicleta – a prática leva a perfeição. Quanto mais você utiliza, mais você criará padrões de comportamento organizado.
+          </li>
+          <li><strong> Faça listas </strong>– Crie o hábito de fazer listas e anotar tudo o que for importante, como tarefas, compromissos, projetos, deadlines, etc. Caso esteja usando uma agenda, mantenha suas anotações junto. O planejamento é condição necessária para o bom desempenho das pessoas com TDAH.
+          </li>
+          <li><strong> Faça agora!</strong>– Para evitar o esquecimento, procrastinação e desordem, comuns em adultos com TDAH, faça o que tiver que ser feito na hora, evitando deixar ‘’para depois’’. Tarefas como responder a um e-mail importante, limpar sua bagunça, retornar uma ligação, preparar uma apresentação não podem ficar para ‘’o dia seguinte’’.
+          </li>
+          <li><strong> Estabeleça um sistema de arquivamento</strong>– Use divisores, ou então separe pelo tipo de documento (receitas, contas, fichas de inscrição, etc.). Etiquetar ou colorir seus arquivos também são ótimas estratégias.
+          </li>
+          <li><strong>Dedique um tempo do seu dia para e-mails </strong>– Separe alguns minutos do seu dia para checar seus e-mails, evitando abrir sua caixa de correspondência de 5 em 5 minutos. Responda, arquive ou apague na hora, dependendo do caso.
+          </li>        
         </ul>
 
         <h3>3 – Administrando seu tempo e não perdendo seus compromissos</h3>
+        
+        <p>Por terem uma percepção diferenciada do tempo, os adultos com TDAH sofrem com a má administração do mesmo. Frequentemente perdem a hora, prazos, sempre acham que ainda tem tempo para realizar determinada tarefa (quando na realidade não tem). Muitos adultos com TDAH se frustram de tal maneira que, no final do dia, não realizaram nada do que tinham planejado.</p>
+
+        <ul>
+          <li> 
+            <p> <strong>Use um relógio</strong> – Pode ser de pulso, timer, alarme, celular ou do computador – desde que esteja sempre à vista e com o horário certo. Quando começar uma tarefa, diga em voz alta ou anote o horário, alem de definir uma quantidade de tempo para a mesma.
+            </p>
+          </li>
+          <li>
+            <p> Defina prioridades – Defina as suas tarefas mais importantes do dia e depois as com menor importância.</p>
+          </li>
+          <li>
+            <p>
+            Crie uma curta rotina diária – e defina um tempo para ela. Arquivar documentos, retornar ligações, responder e-mails, pagar contas, etc. podem ser feitos durante um mesmo período de tempo (por exemplo: 60 minutos) e sempre na mesma ordem. Dessa maneira, você não se esquecerá de fazer nada importante e conseguirá realizar todas as suas tarefas.
+            </p>
+          </li>
+          <li>
+            <p> 
+            <strong>Dê mais tempo do que você julgar necessário</strong> – Por exemplo, se você acha que para realizar determinada tarefa, ou encontrar alguém em outro lugar, você levará por volta de 30 minutos, adicione mais 15 minutos. Com certeza você irá se atrasar.
+            </p>
+          </li>
+          <li>
+            <p>
+            <strong>Use alarmes e chegue cedo </strong>– Anote os horários de seus compromissos com 15 minutos (ou o tempo que você julgar necessário) de antecedência e use alarmes para que você chegue na hora certa.
+            </p>
+          </li>
+          <li>
+            <p>
+            <strong>Faça uma tarefa de cada vez</strong> – Execute seus compromissos um de cada vez. Caso seja um grande projeto, divida-o em pequenas partes e termine-os um de cada vez.
+            </p>
+          </li>
+          <li>
+            <p>
+            <strong>Aprenda a dizer não </strong>– A impulsividade no adulto com TDAH pode fazer com que ele aceite executar muitos projetos ou compromissos de uma só vez sem uma avaliação prévia e ponderada das suas capacidades e, consequentemente, não consiga finalizar nenhum. Isto gera sentimentos de frustração, baixa autoestima e incompetência. Verifique sempre a sua agenda para ver se você realmente pode aceitar um compromisso, tarefa ou trabalho extra, de maneira que isso não o prejudique.
+            </p>
+          </li>
+        </ul>
+       
 
         <p><i>Fonte: site da Associação Brasileira do Déficit de Atenção - ABDA</i></p>
-
-
        </Section>
 
        <Section
