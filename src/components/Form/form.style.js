@@ -14,7 +14,7 @@ export const FormStyled = styled.form`
     border-radius: 8px;
     padding:  32px 12px; 
 
-    & h2{
+      & h2{
         text-align: center;
         padding-bottom: 30px;
     }
