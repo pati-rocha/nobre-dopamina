@@ -44,18 +44,16 @@ export const NavStyled = styled.nav `
         height: 4rem;            
     }
    
-    
-    /* @media screen and (max-width:480px) {
-        flex-direction: column;  
-        height: 200px;
-        
+
+    @media screen and (max-width:480px) {       
+        flex-direction: column;
+        justify-content: center;
         .title {
             font-size: 1.5rem;
         }
         .menu {
-            font-size: .8rem;
-            background-color: aqua;
-            color: #000;
+            //flex-direction: column;
+            font-size: .8rem;          
             padding: 8px;
             
         }
@@ -63,6 +61,6 @@ export const NavStyled = styled.nav `
             flex-direction: column;
             height: 100%;
         }
-    } */
+    } 
 
 `

@@ -17,5 +17,16 @@ export const MainCommunitStyled = styled.main`
         font-size: 2.5rem;
         padding-bottom: 50px;
     }
+    & .inputSearch{
+        margin: auto;
+        text-align: center;
+        max-width: 600px;
+        width: 100%;
+        padding: 6px;
+        border-radius: 4px;
+        border:1px solid #BDBDBD;
+        font-size: 1rem;
+       
+    }
 
 `
