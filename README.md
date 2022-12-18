@@ -2,7 +2,11 @@
 
 ###   🎯 Contexto
 
-Baseado numa experiência pessoal, o site foi desenvolvido com o objetivo de ser um local seguro onde as pessoas possam compartilhar experiências e indicações profissionais para o tratamento do TDAH.
+Baseado numa experiência pessoal, a dificuldade de encontrar referências sobre atendimento humanizado e especializado para o tratamento do TDAH e após relatos de pacientes sobre médicos desatualizados e a descrentes do transtorno em adultos, o site foi desenvolvido com objetivo de centralizar as indicações e também ser um local seguro onde as pessoas possam compartilhar experiências e indicações profissionais como também encontrar informações, dicas, sugestões e matérias sobre o TDAH.
+
+O nome que deu origem a página partiu da própria condição do transtorno que é a produção do neurotransmissor dopamina ser abaixo do normal, por isso o destaque para ser valorizada.
+A logo se trata de uma ilustração da fórmula estrutural da dopamina que faz parte da família das catecolaminas.
+
 
 🚀 Vem conferir o resultado final: https://nobredopamina.vercel.app/
 
@@ -14,11 +18,18 @@ Baseado numa experiência pessoal, o site foi desenvolvido com o objetivo de ser
 * Login
 * Error
 
-Todas as páginas terão os componentes:
+Todas as páginas tem os componentes:
 
 * Menu
 * Header
 * Footer
+
+Outros componentes
+
+* Container
+* Form
+* Section
+* Social
 
 #### Estrutura do projeto
 
@@ -45,6 +56,17 @@ Todas as páginas terão os componentes:
 | `Vercel` | Hospedagem para a aplicação, fiz o deploy integrado com o github|
 | `Github` | Hospedagem do código fonte integrado com gerenciador de versionamento|
 
+<br />
+
+### `💪 Maiores Desafios `
+
+- Estilização utilizando Styled Components
+- Criação de formulários utilizando React Hook forms
+- alidação de dados do formulário utilizando Yup
+- Chamadas para API do IBGE preenchendo automaticamente os campos de estado e cidade
+- Criação de banco de dados no Firebase
+
+<br />
 
 ### `📝 Como rodar o projeto localmente`
 
@@ -73,13 +95,15 @@ Siga os passos e inclua as informações abaixo:
 
 ### 😎 Próximos passos mapeados
 
-- Concluir cadastro de usuários
-- Adicionar código de conduta
-- Adicionar login social com Google
-- Adicionar pesquisa por estados e especialidade na página comunidade
+- Conclusão da página de login  para acesso a rotas privadas
+- Criar página cadastro de usuários
+- Adicionar termos de uso 
+- Adicionar autenticação com Google
+- Adicionar filtro por estados e especialidade na página comunidade
 - Incluir Testes
 - Revisar acessibilidade
 - Revisar responsividade
+
 
 <br />
 <br />
