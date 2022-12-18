@@ -8,13 +8,15 @@ import imgTypes from "../../assets/types.png"
 import imgDiagnosis from "../../assets/diagnosis.png"
 
 import { useState } from "react";
+import { GoToTop } from "../../components/GoToTop/goToTop.jsx";
 
 
 export function Home() {
 
-  const [open, setOpen] = useState(false)
+  // const [open, setOpen] = useState(false)
   return (
     <>
+    <GoToTop />
       <Header image={imgHeader} />
       <MainHomeStyled>
         <section className="firstSection">

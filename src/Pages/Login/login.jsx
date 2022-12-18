@@ -11,6 +11,7 @@ import { auth } from "../../services/firebaseConfig";
 import { signInWithEmailAndPassword } from "firebase/auth";
 
 import { useNavigate } from "react-router-dom";
+import { GoToTop } from "../../components/GoToTop/goToTop";
 
 const schema = yup.object().shape({
   email: yup.string().required("Campo obrigatório!"),
@@ -45,6 +46,8 @@ export function Login() {
   }
 
   return (
+    <>
+    <GoToTop />
     <MainLoginStyled>
       <img src={imgLogin} alt="ilustração de um boneco com cadeado fechado" />
       <h2>Fazer login</h2>
@@ -77,5 +80,6 @@ export function Login() {
 
       </FormStyled>
     </MainLoginStyled>
+    </>
   );
 }

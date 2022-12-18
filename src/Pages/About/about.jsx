@@ -1,10 +1,12 @@
 import { Header } from "../../components/Header/header";
 import { MainAboutStyled } from "./about.style";
 import imgDuvida from "../../assets/duvida1.png"
+import { GoToTop } from "../../components/GoToTop/goToTop";
 
 export function About() {
     return(
         <>
+        <GoToTop/>
         <Header image={imgDuvida} textAlt={"balões coloridos com interrogação dentro"}  />
        <MainAboutStyled>
         <h2>O que é o TDAH?</h2>
